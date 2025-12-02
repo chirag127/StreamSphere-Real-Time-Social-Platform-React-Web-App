@@ -1,53 +1,44 @@
-# Security Policy for TweetStorm-Real-Time-Social-Media-Web-App
+# Security Policy for StreamSphere-Real-Time-Social-Platform-React-Template
 
-## Our Commitment to Security
+As the Apex Technical Authority, we treat security as a foundational element, not an afterthought. This repository adheres to Zero-Defect principles, ensuring that all components meet rigorous 2026 security standards.
 
-The `TweetStorm` team is deeply committed to ensuring the security and integrity of our platform. We value the contributions of the security research community and believe that responsible disclosure is essential for maintaining a safe environment for all our users. This document outlines our security policy, including how to report vulnerabilities and what you can expect from us.
+## 1. Supported Versions
 
-## Supported Versions
+We actively support and patch the currently tracked major version of this template.
 
-As an actively developed project, security patches and updates are applied directly to our main development branch. We only provide security support for the latest version available in the `main` branch.
+| Branch | Supported Status | Last Updated |
+| :--- | :--- | :--- |
+| `main` | Supported | See latest commit date on `main` branch |
 
-| Version | Supported          |
-| ------- | ------------------ |
-| Latest `main` | :white_check_mark: |
-| < 1.0.0 | :x:                |
+## 2. Reporting a Vulnerability
 
-## Reporting a Vulnerability
+We welcome responsible disclosure of security vulnerabilities. All security reports must follow a strict process to ensure prompt and safe resolution before public exposure.
 
-We take all security reports seriously. If you believe you have discovered a security vulnerability in `TweetStorm`, please report it to us privately to protect the project and its users.
+**Process:**
+1.  **Do Not** file a public issue or open a pull request mentioning the vulnerability.
+2.  **Contact Directly:** Email the maintainer privately at: `security+stream-sphere@chirag127.com` (Placeholder, actual contact should be provided).
+3.  **Content:** Your report must include a clear description of the vulnerability, affected versions/files, and detailed reproduction steps.
+4.  **Acknowledgement:** We commit to acknowledging receipt of the report within 48 hours.
 
-**Please do not report security vulnerabilities through public GitHub issues.**
+## 3. Patching and Remediation
 
-Instead, please use the preferred method below:
+Upon receiving a valid vulnerability report, the following remediation lifecycle is initiated:
 
-### GitHub Private Vulnerability Reporting (Preferred Method)
+1.  **Triage & Validation (24-48 Hours):** The security team validates the reported vulnerability and assesses its CVSS score.
+2.  **Patch Development (7 Days Max):** A private branch is created to develop and test the fix. For client-facing templates built on React/Vite/TS, patches prioritize dependency updates, strict TypeScript mode enforcement, and proper input sanitization against XSS vectors.
+3.  **Internal Review (3 Days):** The patch undergoes mandatory peer review by a designated security architect.
+4.  **Disclosure:** Once the patch is merged into the `main` branch and a new release tag is created, we will coordinate a public disclosure based on industry best practices (typically 7-14 days after fix deployment, unless immediate public risk requires faster disclosure).
 
-Use the [private vulnerability reporting feature](https://github.com/chirag127/TweetStorm-Real-Time-Social-Media-Web-App/security/advisories/new) on GitHub. This is the most secure and efficient way to reach our maintainers directly.
+## 4. Security Auditing & Tooling
 
-### What to Include in Your Report
+This project integrates automated security checks into the CI/CD pipeline (`.github/workflows/ci.yml`):
 
-To help us triage and validate your finding as quickly as possible, please include the following in your report:
+*   **Dependency Scanning:** Regular checks against known vulnerabilities in NPM packages (e.g., using `npm audit` or dedicated GitHub Dependabot integration).
+*   **Code Quality & Linting:** Strict adherence to **Biome** configuration ensures formatting and stylistic errors that could mask logic flaws are eliminated.
+*   **Type Safety:** Utilization of **TypeScript** in strict mode prevents common runtime errors associated with type coercion, a major source of web application vulnerabilities.
 
-*   **Type of vulnerability** (e.g., XSS, CSRF, SQLi, Authentication Bypass).
-*   **A detailed description** of the vulnerability and its potential impact.
-*   **Step-by-step instructions** to reproduce the issue, including any URLs, request/response captures, or code snippets.
-*   **Proof-of-Concept (PoC)** code or a working exploit.
-*   Any **mitigation suggestions** you might have.
+We encourage external security audits using static analysis tools targeting the React/Vite stack.
 
-## Our Disclosure Process
+***
 
-1.  **Acknowledgement:** We will acknowledge receipt of your vulnerability report within **48 hours**.
-2.  **Triage & Investigation:** We will investigate the report to confirm the vulnerability and determine its severity. We aim to provide an initial assessment and a status update within **7 business days**.
-3.  **Remediation:** Once confirmed, we will work on a fix. The timeline for a patch will vary depending on the complexity of the vulnerability.
-4.  **Coordinated Disclosure:** We will coordinate with you on the public disclosure of the vulnerability. We prefer to release a patch before disclosing the details to the public. We will credit you for your discovery unless you prefer to remain anonymous.
-
-## Security Measures
-
-We employ the following measures to enhance the security of our project:
-
-*   **Dependency Scanning:** We use GitHub Dependabot to automatically scan our dependencies for known vulnerabilities and create pull requests to update them.
-*   **Static Code Analysis:** We have integrated static analysis security testing (SAST) tools, such as GitHub CodeQL, into our CI/CD pipeline to identify potential vulnerabilities in our codebase before they are deployed.
-*   **Code Reviews:** All code changes are subject to a mandatory peer review process to ensure code quality and identify potential security flaws.
-
-We thank you for your help in keeping `TweetStorm-Real-Time-Social-Media-Web-App` and its users safe.
+*Note: This repository is a template. Users integrating this template into production environments are responsible for conducting their own final security audits specific to their backend integrations and deployment infrastructure.*
