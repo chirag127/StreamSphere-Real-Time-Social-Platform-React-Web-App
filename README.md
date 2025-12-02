@@ -1,130 +1,154 @@
-# TweetStorm: Real-Time Social Media Web App
+# StreamSphere - Real-Time Social Platform React Template
 
-[![Build Status](https://img.shields.io/github/actions/workflow/ci.yml?style=flat-square&logo=github&label=Build&user=chirag127&repo=TweetStorm-Real-Time-Social-Media-Web-App)](https://github.com/chirag127/TweetStorm-Real-Time-Social-Media-Web-App/actions/workflows/ci.yml)
-[![Code Coverage](https://img.shields.io/codecov/c/github/chirag127/TweetStorm-Real-Time-Social-Media-Web-App?style=flat-square&logo=codecov&label=Coverage)](https://app.codecov.io/gh/chirag127/TweetStorm-Real-Time-Social-Media-Web-App)
-[![Tech Stack](https://img.shields.io/badge/Tech-TypeScript%20%7C%20React%20%7C%20Node.js-blue?style=flat-square&logo=javascript&logo=typescript&logo=react&logo=nodedotjs)](https://github.com/chirag127/TweetStorm-Real-Time-Social-Media-Web-App)
-[![Biome Linter](https://img.shields.io/badge/Lint-Biome-green?style=flat-square&logo=biome)](https://github.com/chirag127/TweetStorm-Real-Time-Social-Media-Web-App)
-[![License](https://img.shields.io/github/license/chirag127/TweetStorm-Real-Time-Social-Media-Web-App?style=flat-square&logo=creativecommons)](https://github.com/chirag127/TweetStorm-Real-Time-Social-Media-Web-App/blob/main/LICENSE)
-[![GitHub Stars](https://img.shields.io/github/stars/chirag127/TweetStorm-Real-Time-Social-Media-Web-App?style=flat-square&logo=github)](https://github.com/chirag127/TweetStorm-Real-Time-Social-Media-Web-App/stargazers)
+![GitHub Actions Build Status](https://img.shields.io/github/actions/workflow/status/chirag127/StreamSphere-Real-Time-Social-Platform-React-Template/ci.yml?style=flat-square)
+![Code Coverage](https://codecov.io/gh/chirag127/StreamSphere-Real-Time-Social-Platform-React-Template/branch/main/graph/badge.svg?style=flat-square)
+![License](https://img.shields.io/badge/License-CC%20BY--NC%204.0-blue?style=flat-square)
+![GitHub Stars](https://img.shields.io/github/stars/chirag127/StreamSphere-Real-Time-Social-Platform-React-Template?style=flat-square)
 
+[⭐ Star this Repo](https://github.com/chirag127/StreamSphere-Real-Time-Social-Platform-React-Template)
 
-🌟 Star this Repo
+---
 
-## BLUF
-TweetStorm is a full-stack web application that replicates the core features of Twitter, including real-time tweeting, user profiles, and social feeds, built with modern JavaScript. Experience a robust, scalable, and performant social media platform, demonstrating modern web development best practices.
+## 🚀 BLUF: Vision & Value Proposition
 
-## Architecture
+StreamSphere is a production-ready, open-source architectural template engineered for rapidly deploying scalable, low-latency social media applications. This boilerplate enforces modern best practices using TypeScript, Vite, and TailwindCSS v4 to deliver unparalleled frontend performance.
+
+## 📐 Architectural Blueprint (FSD via TypeScript/Vite)
+
+This repository adheres to the Feature-Sliced Design (FSD) pattern, optimizing component reusability and maintainability across the application surface.
 
 mermaid
-graph LR
-  subgraph Frontend
-    A[React] --> B(TypeScript)
-    B --> C{State Management (e.g., Zustand)}
-    C --> D(TailwindCSS)
-  end
-
-  subgraph Backend
-    E[Node.js (Express)] --> F(TypeScript)
-    F --> G{REST API}
-    G --> H(Database - MongoDB or PostgreSQL)
-  end
-
-  subgraph Realtime
-    I[WebSockets (Socket.IO)] --> E
-  end
-
-  A --> I
-  E --> I
-  style A fill:#f9f,stroke:#333,stroke-width:2px
-  style E fill:#ccf,stroke:#333,stroke-width:2px
+graph TD
+    A[Root Config/Shared] --> B(Features/Pages)
+    B --> C{Components/Entities}
+    B --> D{App/Providers}
+    C --> E[Shared/UI Elements]
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style B fill:#ccf,stroke:#333,stroke-width:2px
 
 
+## 📋 Table of Contents
 
-## Table of Contents
+1.  [🚀 BLUF: Vision & Value Proposition](#-bluf-vision-value-proposition)
+2.  [📐 Architectural Blueprint (FSD via TypeScript/Vite)](#-architectural-blueprint-fsd-via-typescriptvite)
+3.  [📋 Table of Contents](#-table-of-contents)
+4.  [🛠️ Core Technology Stack (2026 Standard)](#-core-technology-stack-2026-standard)
+5.  [🤖 AI Agent Directives (Apex Protocol)](#-ai-agent-directives-apex-protocol)
+6.  [⚙️ Development & Setup](#-development-setup)
+7.  [✅ Development Principles](#-development-principles)
+8.  [⚖️ License](#-license)
 
--   [Installation](#installation)
--   [Usage](#usage)
--   [Features](#features)
--   [Technologies](#technologies)
--   [Contributing](#contributing)
--   [License](#license)
+## 🛠️ Core Technology Stack (2026 Standard)
 
-## AI Agent Directives
+| Category | Technology | Purpose |
+| :--- | :--- | :--- |
+| **Language** | TypeScript 5.x (Strict Mode) | Type Safety, Scalability |
+| **Build Tool** | Vite 5.x | Extreme Build Speed |
+| **Styling** | TailwindCSS v4 (Pre-release Candidate) | Utility-First Design System |
+| **Testing (Unit/Int)** | Vitest | Fast In-memory Unit Testing |
+| **Testing (E2E)** | Playwright | Cross-Browser End-to-End Verification |
+| **Linting/Formatting** | Biome | Unifying Linter, Formatter, and Bundler Checks |
+| **Architecture** | Feature-Sliced Design (FSD) | Enforced Modularity and Dependency Inversion |
+| **Real-Time** | WebSocket/Socket.IO Integration Point | Low-Latency Communication Layer |
+
+## 🤖 AI Agent Directives (Apex Protocol)
 
 <details>
-<summary>🤖 AI Agent Directives</summary>
+<summary><strong>Click to View Apex Directives for Autonomous Maintenance</strong></summary>
 
-This project follows the **Apex Technical Authority** standards and utilizes a modern JavaScript tech stack. Any future agents interacting with this repository **MUST** adhere to the following directives:
+# SYSTEM: APEX TECHNICAL AUTHORITY & ELITE ARCHITECT (DECEMBER 2025 EDITION)
 
-### Tech Stack:
+## 1. IDENTITY & PRIME DIRECTIVE
+**Role:** You are a Senior Principal Software Architect and Master Technical Copywriter with **40+ years of elite industry experience**. You operate with absolute precision, enforcing FAANG-level standards and the wisdom of "Managing the Unmanageable."
+**Context:** Current Date is **December 2025**. You are building for the 2026 standard.
+**Output Standard:** Deliver **EXECUTION-ONLY** results. No plans, no "reporting"—only executed code, updated docs, and applied fixes.
+**Philosophy:** "Zero-Defect, High-Velocity, Future-Proof."
 
-*   **Frontend:** TypeScript (Strict), React, Vite, TailwindCSS.
-*   **Backend:** Node.js, Express, TypeScript.
-*   **Realtime:** WebSockets (Socket.IO).
-*   **Database:** MongoDB or PostgreSQL.
-*   **Package Management:** npm or yarn.
+--- 
 
-### Architectural Patterns:
+## 2. INPUT PROCESSING & COGNITION
+*   **SPEECH-TO-TEXT INTERPRETATION PROTOCOL:**
+    *   **Context:** User inputs may contain phonetic errors (homophones, typos).
+    *   **Semantic Correction:** **STRICTLY FORBIDDEN** from executing literal typos. You must **INFER** technical intent based on the project context.
+    *   **Logic Anchor:** Treat the `README.md` as the **Single Source of Truth (SSOT)**.
+*   **MANDATORY MCP INSTRUMENTATION:**
+    *   **No Guessing:** Do not hallucinate APIs. Do not assume external libraries unless explicitly defined in the toolchain.
+    *   **Research First:** Use `linkup`/`brave` to search for **December 2025 Industry Standards**, **Security Vulnerabilities (XSS/CSRF in React)**, and **2026 UI Trends (e.g., signals adoption, CSS nesting)**.
+    *   **Validation:** Use `docfork` to verify *every* external API signature (e.g., Vite configuration flags, Tailwind JIT behavior).
+    *   **Reasoning:** Engage `clear-thought-two` to architect complex state management flows *before* writing code.
 
-*   **Frontend:** Feature-Sliced Design (FSD).
-*   **Backend:** Clean Architecture.
-*   **General:** SOLID, DRY, KISS, YAGNI principles.
+--- 
 
-### Verification Commands:
+## 3. CONTEXT-AWARE APEX TECH STACKS (LATE 2025 STANDARDS)
+**Directives:** Detect the project type and apply the corresponding **Apex Toolchain**. This repository is a **WEB / APP / GUI** project.
 
-*   `npm install` (or `yarn install`)
-*   `npm run lint` (or `yarn lint`): Uses Biome for linting and formatting.
-*   `npm run test` (or `yarn test`): Uses Vitest for unit tests.
-*   `npm run test:e2e` (or `yarn test:e2e`): Uses Playwright for end-to-end testing.
-*   `npm run build` (or `yarn build`): For production builds.
+*   **PRIMARY SCENARIO: WEB / APP / GUI (Modern Frontend)**
+    *   **Stack:** **TypeScript 6.x (Strict)**, **Vite 7**, **TailwindCSS v4**, **Tauri v2** (if adapting for desktop hybrid). 
+    *   **Lint/Test:** **Biome** (Speed) + **Vitest** (Unit) + **Playwright** (E2E).
+    *   **Architecture:** **Feature-Sliced Design (FSD)**. Strict layer separation is non-negotiable: `Shared` -> `Entities` -> `Features` -> `Pages`.
+    *   **State Management:** Prefer integrated state management solutions (e.g., Preact Signals, TanStack Query, or custom Context/Hooks) over heavy historical libraries unless specified.
 
-### AI Integration (If Applicable):
+--- 
 
-*   Utilize secure API keys and environment variables.
-*   Implement proper rate limiting and error handling for all external API calls.
-*   Adhere to ethical guidelines for AI usage.
+## 4. EXECUTION VERIFICATION COMMANDS
 
-### Security:
-
-*   Follow OWASP guidelines for web application security.
-*   Implement robust authentication and authorization mechanisms.
-*   Regularly update dependencies to address security vulnerabilities.
+*   **LINT & FORMAT CHECK:**
+    `npx @biomejs/biome check --apply .`
+*   **UNIT TEST RUN:**
+    `npx vitest`
+*   **E2E TEST RUN (Playwright):**
+    `npx playwright test`
+*   **START DEVELOPMENT SERVER:**
+    `npm run dev`
 
 </details>
 
-## Development Standards
+## ⚙️ Development & Setup
 
-### Installation
+### Prerequisites
+Ensure you have Node.js (v20+) and npm/pnpm/yarn installed.
 
-1.  Clone the repository:
+### 1. Clone Repository
+bash
+git clone https://github.com/chirag127/StreamSphere-Real-Time-Social-Platform-React-Template.git
+cd StreamSphere-Real-Time-Social-Platform-React-Template
 
-    bash
-    git clone https://github.com/chirag127/TweetStorm-Real-Time-Social-Media-Web-App.git
-    cd TweetStorm-Real-Time-Social-Media-Web-App
-    
 
-2.  Install dependencies:
+### 2. Install Dependencies (Using uv-equivalent speed for Node)
+bash
+npm install
+# OR (Recommended for superior dependency resolution)
+pnpm install
 
-    bash
-    npm install # or yarn install
-    
 
-3.  Set up environment variables (e.g., API keys, database connection strings).
+### 3. Run Development Server
+bash
+npm run dev
+# Server typically starts on http://localhost:5173
 
-### Scripts
 
-| Script          | Description                                    |
-| --------------- | ---------------------------------------------- |
-| `npm start`     | Starts the development server.                 |
-| `npm run build` | Builds the production-ready application.       |
-| `npm run lint`  | Runs the linter (Biome) to check for errors.  |
-| `npm run test`  | Runs unit tests with Vitest.                   |
-| `npm run test:e2e` | Runs end-to-end tests with Playwright.         |
-| `npm run deploy` | Deploys the application to a production server. |
+### Development Scripts
 
-### Principles
+| Script | Command | Description |
+| :--- | :--- | :--- |
+| `dev` | `npm run dev` | Start the blazing fast Vite development server. |
+| `build` | `npm run build` | Compile for production using Rollup/Vite bundling. |
+| `lint` | `npx @biomejs/biome check .` | Check code quality and formatting standards. |
+| `test:unit` | `npx vitest` | Run all unit and integration tests. |
+| `test:e2e` | `npx playwright test` | Execute end-to-end browser automation tests. |
+| `preview` | `npm run preview` | Locally serve the production build via Vite preview. |
 
-*   **SOLID:** Adhere to SOLID principles for maintainable and scalable code.
-*   **DRY:** "Don't Repeat Yourself" - Avoid code duplication.
-*   **YAGNI:** "You Ain't Gonna Need It" - Implement only what is necessary.
+## ✅ Development Principles
 
+We enforce adherence to these architectural tenets:
+
+*   **SOLID:** Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion.
+*   **DRY:** Don't Repeat Yourself. Abstract common logic into `Shared/lib` or `Entities`.
+*   **YAGNI:** You Aren't Gonna Need It. Resist premature abstraction; build only what is required now.
+*   **FSD Layering:** Strict control over imports: Features cannot import from other Features directly; they must flow through Shared or Entities layers.
+
+## ⚖️ License
+
+This project is licensed under the **Creative Commons Attribution-NonCommercial 4.0 International License**. See the [LICENSE](LICENSE) file for details.
+
+*You are free to share and adapt this work for non-commercial purposes, provided you give appropriate credit.*
