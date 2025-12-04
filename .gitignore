@@ -1,72 +1,86 @@
-# Node / Frontend specific
-node_modules
-.env
-.env.*
-!public/.env.example
-
-# Vite / Build output
-dist
-.output
-
-# Logs
-logs
-*.log
+# Node & npm package manager
+node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 
-# IDE / Editor specific
-.vscode
-.idea
+# Build output
+.next/
+.nuxt/
+.out/
+.vercel/
+.netlify/
+.embellish/
+
+# Runtime data
+dist/
+build/
+coverage/
+*.log
+
+# IDEs and editors
+.vscode/
+.idea/
 *.iml
 *.ipr
 *.iws
-.DS_Store
+*.swp
+*~.nib
 
-# OS generated files
+# macOS
 .DS_Store
+.DS_Store?*
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
 Thumbs.db
 
-# Testing
-coverage
-*.test.js
-*.test.jsx
-*.test.ts
-*.test.tsx
-
-# Build artifacts
-build/
-
-# Distribution folder
-dist/
-
-# ESLint cache
+# Linters/formatters
+.editorconfig
 .eslintcache
+.stylelintcache
 
-# Vite cache
-.vite
-
-# React specific
-build/
-node_modules/
-public/
-src/
+# Vite specific
 .env
 .env.local
 .env.development.local
-.env.production.local
 .env.test.local
-*.local
+.env.production.local
 
-# Tailwind CSS cache
-.tailwind-cache
+# React specific
+build/
+public/build/
 
-# Cypress
-cypress/videos
-cypress/screenshots
+# TailwindCSS v4 specific (if applicable, usually not needed for output)
 
-# Playwright
-playwright-report/
+# Other
+*.log
+.DS_Store
+`npm-debug.log`
+`yarn-debug.log`
+`pnpm-debug.log`
+`pnpm-error.log`
+`node_modules/`
+`.env`
+`.env.local`
+`.env.development`
+`.env.development.local`
+`.env.test`
+`.env.test.local`
+`.env.production`
+`.env.production.local`
 
-# Biome cache
-.biome
+# Vite build output directory
+/dist
+
+# Vite lock file
+vite.lock
+
+# Vitest cache directory
+.vitest/
+
+# Playwright cache directory
+.playwright/
