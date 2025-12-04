@@ -1,65 +1,76 @@
-# 🤝 Contributing to StreamSphere-Real-Time-Social-Platform-React-Template
+# Contributing to StreamSphere-Real-Time-Social-Platform-React-Web-App
 
-Thank you for considering contributing to `StreamSphere-Real-Time-Social-Platform-React-Template`! We aim to maintain a high bar for code quality, performance, and developer experience, reflecting the **Apex Technical Authority** standards.
+Thank you for considering contributing to StreamSphere-Real-Time-Social-Platform-React-Web-App! We aim to maintain a production-ready, open-source template for scalable real-time social media apps, built with React, Vite, and TailwindCSS v4.
 
 ## 1. Code of Conduct
 
-This project adheres to the Contributor Covenant Code of Conduct. Please review the [CODE_OF_CONDUCT.md](https://github.com/chirag127/StreamSphere-Real-Time-Social-Platform-React-Template/blob/main/CODE_OF_CONDUCT.md) to understand our expectations for participation.
+This project adheres to the Contributor Covenant Code of Conduct. By participating, you are expected to uphold this code. Please report any unacceptable behavior to <your-email@example.com>.
 
 ## 2. How to Contribute
 
-We welcome contributions in the form of bug reports, feature requests, documentation improvements, and code submissions.
+We welcome contributions of all kinds, including:
 
-### 2.1. Reporting Bugs
+*   **Bug Reports:** Please provide a clear description of the bug, steps to reproduce it, and your environment (OS, browser, Node.js version).
+*   **Feature Requests:** Explain the feature and why it would be valuable. Consider how it aligns with the project's goals.
+*   **Code Contributions:** We prefer contributions via Pull Requests.
 
-*   **Reproduce:** Try to reproduce the bug reliably.
-*   **Search:** Check if the bug has already been reported.
-*   **Report:** If it's a new bug, please open an issue using the **Bug Report** template. Provide clear steps to reproduce, expected vs. actual behavior, environment details (browser, OS), and relevant screenshots or logs.
+## 3. Development Workflow
 
-### 2.2. Requesting Features
+To contribute code, please follow these steps:
 
-*   **Search:** Check if the feature has already been requested.
-*   **Propose:** If it's a new idea, please open an issue using the **Feature Request** template. Clearly describe the proposed functionality and the problem it aims to solve.
+1.  **Fork the Repository:** Create your own fork of the `chirag127/StreamSphere-Real-Time-Social-Platform-React-Web-App` repository.
+2.  **Clone Your Fork:** `git clone https://github.com/chirag127/StreamSphere-Real-Time-Social-Platform-React-Web-App.git` and navigate into the directory: `cd StreamSphere-Real-Time-Social-Platform-React-Web-App`.
+3.  **Set Up Project:** Follow the setup instructions in the `README.md` to install dependencies and configure the project.
+    *   `npm install` or `yarn install` (depending on your package manager preference specified in README).
+4.  **Create a New Branch:** For each feature or fix, create a new branch:
+    `git checkout -b feat/your-feature-name` or `git checkout -b fix/your-bug-fix`.
+5.  **Make Your Changes:** Develop your feature or fix, adhering to the project's coding standards and architectural patterns.
+6.  **Test Your Changes:** Ensure all tests pass. Add new tests for any new features or significant bug fixes.
+    *   Run unit tests: `npm test` or `yarn test`.
+    *   Run E2E tests (if applicable): `npm run e2e` or `yarn run e2e`.
+7.  **Lint and Format:** Ensure your code is clean and adheres to the established linting and formatting rules.
+    *   Run linter: `npm run lint` or `yarn lint`.
+    *   Run formatter: `npm run format` or `yarn format`.
+8.  **Commit Your Changes:** Write clear, concise commit messages.
+    `git commit -m "feat: Add user profile editing functionality"`
+9.  **Push to Your Fork:** `git push origin feat/your-feature-name`.
+10. **Open a Pull Request:** Submit a Pull Request from your feature branch to the `main` branch of the `chirag127/StreamSphere-Real-Time-Social-Platform-React-Web-App` repository. Provide a detailed description of your changes.
 
-### 2.3. Contributing Code
+## 4. Architectural Guidelines
 
-*   **Fork:** Fork the repository from `https://github.com/chirag127/StreamSphere-Real-Time-Social-Platform-React-Template`.
-*   **Branch:** Create a new branch for your feature or fix (e.g., `feature/new-real-time-chat` or `fix/login-bug`).
-*   **Develop:** Implement your changes. Ensure your code adheres to the project's coding standards and passes all tests.
-*   **Test:** Write new tests or update existing ones to cover your changes. Run the test suite locally using `npm run test`.
-*   **Lint & Format:** Ensure your code is clean and formatted using `npm run lint` and `npm run format`.
-*   **Commit:** Make clear, concise commit messages. Follow conventional commits if possible.
-*   **Pull Request:** Submit a Pull Request (PR) targeting the `main` branch of the original repository. Provide a detailed description of your changes, linking to any relevant issues.
+*   **Technology Stack:** TypeScript, Vite, TailwindCSS v4.
+*   **Architecture:** Feature-Sliced Design (FSD) is the preferred pattern for frontend organization. Aim for modularity, scalability, and maintainability.
+*   **State Management:** Utilize standardized state management solutions as defined in the project's `README.md`.
+*   **Component Design:** Follow best practices for React component development, emphasizing reusability and separation of concerns.
 
-## 3. Development Environment Setup
+## 5. Branching Strategy
 
-To set up the development environment, please refer to the `README.md` file for detailed instructions on installing dependencies and running the project locally.
+We follow a simplified Gitflow-like branching strategy:
 
-bash
-# Example setup commands (refer to README.md for specifics)
-git clone https://github.com/chirag127/StreamSphere-Real-Time-Social-Platform-React-Template.git
-cd StreamSphere-Real-Time-Social-Platform-React-Template
-npm install
+*   `main`: Stable production releases.
+*   `develop`: Integration branch for features.
+*   `feat/*`: Feature branches (e.g., `feat/user-auth`).
+*   `fix/*`: Bug fix branches (e.g., `fix/login-bug`).
 
+All Pull Requests should target the `develop` branch, which will be periodically merged into `main` for releases.
 
-## 4. Coding Standards & Principles
+## 6. Pull Request Guidelines
 
-We strive for excellence by adhering to these principles:
+*   **Clear Title and Description:** The title should concisely describe the PR. The description should explain the "what" and "why" of your changes.
+*   **Link to Issues:** If your PR addresses an issue, reference it using keywords like `Closes #123` or `Fixes #456`.
+*   **Code Reviews:** All PRs will be reviewed by at least one maintainer. Be prepared to address feedback.
+*   **CI Checks:** Ensure all Continuous Integration checks (build, lint, test) pass before submitting your PR. The workflow is defined in `.github/workflows/ci.yml`.
 
-*   **SOLID:** Design principles for maintainable and understandable object-oriented software.
-*   **DRY (Don't Repeat Yourself):** Avoid redundancy in code.
-*   **YAGNI (You Ain't Gonna Need It):** Implement only what is necessary now.
-*   **Apex Standards:** Follow the technical directives outlined in `AGENTS.md`.
-*   **TypeScript (Strict):** Utilize TypeScript's strict mode for enhanced type safety.
-*   **Vite & TailwindCSS:** Leverage these for optimal frontend performance and styling.
-*   **Testing:** Write comprehensive unit and end-to-end tests.
+## 7. Reporting Security Vulnerabilities
 
-## 5. AI Agent Directives
+We take security seriously. If you discover a security vulnerability, please follow the guidelines outlined in the `.github/SECURITY.md` file. Do not open a public issue for security concerns.
 
-This project integrates with AI agents as defined in `AGENTS.md`. Ensure any contributions align with these directives, particularly regarding AI model interactions, data handling, and ethical considerations.
+## 8. Project Standards
 
-## 6. Submitting Your Contributions
+This project adheres to the following principles:
 
-We value your effort. All contributions will be reviewed promptly. By submitting a contribution, you agree that your contribution will be licensed under the **CC BY-NC** license.
+*   **SOLID:** Adhere to the Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, and Dependency Inversion principles where applicable.
+*   **DRY:** Don't Repeat Yourself. Extract common logic into reusable functions or components.
+*   **YAGNI:** You Ain't Gonna Need It. Avoid adding functionality until it's actually required.
 
-We look forward to your contributions to make `StreamSphere-Real-Time-Social-Platform-React-Template` even better!
+By contributing, you agree that your contributions will be licensed under the **CC BY-NC 4.0 License**.
