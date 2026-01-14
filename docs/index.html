@@ -1,0 +1,197 @@
+```html
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StreamSphere – Real‑Time Social Platform React Template</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Tailwind config for glassmorphism -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            glass: "rgba(255, 255, 255, 0.15)",
+          },
+          backdropBlur: {
+            xs: "2px",
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Favicon (optional) -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800 text-gray-100 antialiased">
+
+  <!-- ======== NAVIGATION ======== -->
+  <header class="sticky top-0 z-10 bg-black/30 backdrop-blur-md shadow-md">
+    <nav class="container mx-auto flex items-center justify-between py-4 px-6">
+      <a href="#" class="text-2xl font-bold text-white drop-shadow-md">
+        StreamSphere
+      </a>
+      <ul class="flex space-x-6 text-sm font-medium">
+        <li><a href="#features" class="hover:text-indigo-300 transition">Features</a></li>
+        <li><a href="#demo" class="hover:text-indigo-300 transition">Demo</a></li>
+        <li><a href="#author" class="hover:text-indigo-300 transition">Author</a></li>
+        <li><a href="https://github.com/chirag127/StreamSphere-Real-Time-Social-Platform-React-Template"
+               target="_blank"
+               class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-md transition">
+          GitHub
+        </a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ======== HERO SECTION ======== -->
+  <section class="flex flex-col items-center justify-center text-center py-24 px-4">
+    <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 to-pink-300">
+      StreamSphere
+    </h1>
+    <p class="mt-4 max-w-2xl text-lg md:text-xl text-gray-200">
+      A complete, production‑ready React template for building real‑time social platforms.
+      Powered by modern web‑socket tech, flexible UI components, and AI‑enhanced features.
+    </p>
+
+    <!-- Badges -->
+    <div class="mt-6 flex flex-wrap justify-center gap-3">
+      <img src="https://img.shields.io/github/actions/workflow/status/chirag127/StreamSphere-Real-Time-Social-Platform-React-Template/ci.yml?style=flat-square"
+           alt="GitHub Actions Build Status"
+           class="h-6" />
+      <img src="https://codecov.io/gh/chirag127/StreamSphere-Real-Time-Social-Platform-React-Template/branch/main/graph/badge.svg?style=flat-square"
+           alt="Code Coverage"
+           class="h-6" />
+      <img src="https://img.shields.io/badge/License-CC%20BY--NC%204.0-blue?style=flat-square"
+           alt="License"
+           class="h-6" />
+      <img src="https://img.shields.io/github/stars/chirag127/StreamSphere-Real-Time-Social-Platform-React-Template?style=flat-square"
+           alt="GitHub Stars"
+           class="h-6" />
+    </div>
+
+    <!-- CTA Buttons -->
+    <div class="mt-8 flex flex-col sm:flex-row gap-4">
+      <a href="#demo"
+         class="inline-block bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition">
+        Live Demo
+      </a>
+      <a href="https://github.com/chirag127/StreamSphere-Real-Time-Social-Platform-React-Template"
+         target="_blank"
+         class="inline-block bg-gray-800/70 hover:bg-gray-700/70 text-gray-100 font-semibold py-3 px-6 rounded-lg backdrop-blur-xs shadow-md transition">
+        View on GitHub
+      </a>
+    </div>
+  </section>
+
+  <!-- ======== FEATURES ======== -->
+  <section id="features" class="container mx-auto py-20 px-6">
+    <h2 class="text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 to-pink-300">
+      Features
+    </h2>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Feature Card -->
+      <div class="bg-glass backdrop-blur-xs rounded-xl p-6 border border-white/10 shadow-lg hover:shadow-2xl transition">
+        <svg class="w-12 h-12 text-indigo-300 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2-1.343-2-3-2zM12 14c-4.418 0-8 1.79-8 4v2h16v-2c0-2.21-3.582-4-8-4z"/>
+        </svg>
+        <h3 class="text-xl font-semibold mb-2 text-white">Real‑time Messaging</h3>
+        <p class="text-gray-300">WebSocket powered chat, notifications, and activity streams with zero‑lag updates.</p>
+      </div>
+
+      <div class="bg-glass backdrop-blur-xs rounded-xl p-6 border border-white/10 shadow-lg hover:shadow-2xl transition">
+        <svg class="w-12 h-12 text-indigo-300 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 14l9-5-9-5-9 5 9 5z"/>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 14l6.16-3.422A12.083 12.083 0 0118 21.5c-3.31 0-6.423-1.13-9-3.03"/>
+        </svg>
+        <h3 class="text-xl font-semibold mb-2 text-white">AI‑enhanced Feeds</h3>
+        <p class="text-gray-300">Personalised content ranking powered by GenAI models, ready to plug‑in.</p>
+      </div>
+
+      <div class="bg-glass backdrop-blur-xs rounded-xl p-6 border border-white/10 shadow-lg hover:shadow-2xl transition">
+        <svg class="w-12 h-12 text-indigo-300 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 8c-3.866 0-7 2.239-7 5s3.134 5 7 5 7-2.239 7-5-3.134-5-7-5z"/>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 3v1M5.636 5.636l.707.707M2 12h1M5.636 18.364l.707-.707M12 20v1M18.364 18.364l-.707-.707M20 12h-1M18.364 5.636l-.707.707"/>
+        </svg>
+        <h3 class="text-xl font-semibold mb-2 text-white">Dark & Light Themes</h3>
+        <p class="text-gray-300">Built‑in theming with smooth transitions and glass‑morphism aesthetics.</p>
+      </div>
+
+      <div class="bg-glass backdrop-blur-xs rounded-xl p-6 border border-white/10 shadow-lg hover:shadow-2xl transition">
+        <svg class="w-12 h-12 text-indigo-300 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        <h3 class="text-xl font-semibold mb-2 text-white">Modular Architecture</h3>
+        <p class="text-gray-300">Component‑driven, type‑safe with TypeScript, ready for scaling.</p>
+      </div>
+
+      <div class="bg-glass backdrop-blur-xs rounded-xl p-6 border border-white/10 shadow-lg hover:shadow-2xl transition">
+        <svg class="w-12 h-12 text-indigo-300 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 12h6m-3-3v6"/>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 2a10 10 0 110 20 10 10 0 010-20z"/>
+        </svg>
+        <h3 class="text-xl font-semibold mb-2 text-white">Full CI/CD Pipeline</h3>
+        <p class="text-gray-300">GitHub Actions, code coverage, and automated releases out‑of‑the‑box.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== LIVE DEMO ======== -->
+  <section id="demo" class="bg-black/40 backdrop-blur-sm py-20">
+    <div class="container mx-auto text-center px-6">
+      <h2 class="text-4xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 to-pink-300">
+        Live Demo
+      </h2>
+
+      <!-- Placeholder for demo (could be an iframe or screenshot) -->
+      <div class="relative mx-auto max-w-4xl rounded-xl overflow-hidden shadow-2xl border border-white/10">
+        <img src="https://raw.githubusercontent.com/chirag127/StreamSphere-Real-Time-Social-Platform-React-Template/main/screenshots/homepage.png"
+             alt="StreamSphere Demo Screenshot"
+             class="w-full object-cover" />
+        <div class="absolute inset-0 bg-glass backdrop-blur-xs flex items-center justify-center">
+          <a href="https://stream-sphere-demo.vercel.app"
+             target="_blank"
+             class="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-3 px-8 rounded-lg shadow-lg transition">
+            Open Demo
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== AUTHOR SECTION ======== -->
+  <section id="author" class="container mx-auto py-20 px-6">
+    <h2 class="text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 to-pink-300">
+      Meet the Author
+    </h2>
+
+    <div class="flex flex-col md:flex-row items-center md:items-start gap-8 max-w-4xl mx-auto">
+      <img src="https://avatars.githubusercontent.com/u/XXXXX?v=4"
+           alt="Chirag Singhal"
+           class="w-40 h-40 rounded-full border-4 border-white/20 shadow-lg" />
+
+      <div class="text-center md:text-left">
+        <h3 class="text-2xl font-semibold text-white">Chirag Singhal</h3>
+        <p class="mt-2 text-gray-300">
+          Software Engineer • Backend & GenAI Specialist <br />
+          Bhubaneswar, Odisha, India
+        </p>
+
+        <ul class="flex flex-wrap justify-center md:justify-start gap-4 mt-4">
+          <li><a href="https://github.com/chirag127"
+                 target="_blank

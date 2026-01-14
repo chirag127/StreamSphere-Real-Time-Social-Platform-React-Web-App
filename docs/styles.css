@@ -1,0 +1,283 @@
+```css
+/* --------------------------------------------------------------
+   docs/styles.css
+   StreamSphere – Real‑Time Social Platform React Template
+   Author: Chirag Singlar (c) 2026 – Glassmorphism / Modern UI
+   -------------------------------------------------------------- */
+
+/* ----------------------------------------------------------------
+   Root variables – colour palette, typography & glass‑effect defaults
+   ---------------------------------------------------------------- */
+:root {
+  /* Primary / accent colours – matching the StreamSphere branding */
+  --color-primary: #0ea5e9;            /* sky‑blue */
+  --color-primary-dark: #0284c7;
+  --color-primary-light: #7dd3fc;
+
+  /* Neutrals */
+  --color-bg: #f0f4f8;                /* light gray‑blue background */
+  --color-surface: rgba(255, 255, 255, 0.25); /* glass base */
+  --color-surface-dark: rgba(0, 0, 0, 0.25);
+  --color-text: #1e293b;             /* dark slate */
+  --color-muted: #64748b;             /* muted slate */
+  --color-border: rgba(255, 255, 255, 0.18);
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, -apple-system,
+               'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: 'Fira Code', Menlo, Monaco, Consolas, 'Courier New', monospace;
+
+  /* Glassmorphism blur & opacity */
+  --glass-blur: 12px;
+  --glass-opacity: 0.45;
+}
+
+/* ----------------------------------------------------------------
+   Global resets & base styles
+   ---------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #e0f7ff 0%,
+    #cfe8ff 30%,
+    #b3d8ff 60%,
+    #a6c8ff 100%
+  );
+  color: var(--color-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ----------------------------------------------------------------
+   Layout containers
+   ---------------------------------------------------------------- */
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Flex utilities for quick layout (fallback to Tailwind classes) */
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.items-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.space-x-2 > * + * {
+  margin-left: 0.5rem;
+}
+
+/* ----------------------------------------------------------------
+   Glassmorphism component – reusable class
+   ---------------------------------------------------------------- */
+.glass {
+  background: var(--color-surface);
+  border-radius: 1rem;
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark‑mode variant – optional, toggled via .dark on <html> */
+html.dark .glass {
+  background: var(--color-surface-dark);
+}
+
+/* ----------------------------------------------------------------
+   Header / Navigation
+   ---------------------------------------------------------------- */
+header {
+  padding: 1.5rem 0;
+  margin-bottom: 2rem;
+}
+header .logo {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+header nav a {
+  color: var(--color-muted);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+header nav a:hover,
+header nav a.active {
+  color: var(--color-primary);
+}
+
+/* ----------------------------------------------------------------
+   Buttons – primary, secondary and ghost (glass) styles
+   ---------------------------------------------------------------- */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+.btn-primary:hover {
+  background: var(--color-primary-dark);
+}
+.btn-secondary {
+  background: var(--color-muted);
+  color: #fff;
+}
+.btn-secondary:hover {
+  background: #475569;
+}
+.btn-ghost {
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  backdrop-filter: blur(var(--glass-blur));
+}
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* ----------------------------------------------------------------
+   Card component – used for posts, user profiles, etc.
+   ---------------------------------------------------------------- */
+.card {
+  @extend .glass;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* ----------------------------------------------------------------
+   Form elements
+   ---------------------------------------------------------------- */
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  background: rgba(255, 255, 255, 0.3);
+  color: var(--color-text);
+  font-size: 1rem;
+  backdrop-filter: blur(var(--glass-blur));
+}
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background: rgba(255, 255, 255, 0.45);
+}
+
+/* ----------------------------------------------------------------
+   Footer – always present, includes required copyright line
+   ---------------------------------------------------------------- */
+footer {
+  margin-top: 4rem;
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--color-muted);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(var(--glass-blur));
+  border-top: 1px solid var(--color-border);
+}
+footer a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* --------------------------------------------------------------
+   Responsive utilities – mobile‑first approach
+   -------------------------------------------------------------- */
+@media (min-width: 640px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+@media (min-width: 768px) {
+  .grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+/* --------------------------------------------------------------
+   Utility classes (lightweight replacements for Tailwind utilities)
+   -------------------------------------------------------------- */
+.text-center { text-align: center; }
+.text-left   { text-align: left; }
+.text-right  { text-align: right; }
+
+.font-bold   { font-weight: 700; }
+.font-medium { font-weight: 500; }
+
+.rounded-lg { border-radius: 0.75rem; }
+.rounded-full { border-radius: 9999px; }
+
+.shadow-sm { box-shadow: 0 1px 2px rgba(0,0,0,.05); }
+.shadow-md { box-shadow: 0 4px 6px rgba(0,0,0,.1); }
+.shadow-lg { box-shadow: 0 10px 15px rgba(0,0,0,.15); }
+
+/* --------------------------------------------------------------
+   Animations – subtle fade‑in for page load
+   -------------------------------------------------------------- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* --------------------------------------------------------------
+   End of styles.css
+   -------------------------------------------------------------- */
+```
